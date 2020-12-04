@@ -14,7 +14,7 @@ $(document).ready(function() {
       requestContent(page);
   
       // Update the page title in the browser tab
-      document.title = 'My AJAX Web Page | ' + formatForUrl(page);
+      document.title = 'BugMe Issue Tracker | ' + formatForUrl(page);
   
       // Update active class on navigation links
       removeActiveClass();
