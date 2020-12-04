@@ -32,7 +32,7 @@ $(document).ready(function() {
       requestContent(filename);
   
       // Update the page title in the browser tab
-      document.title = 'My AJAX Web Page | ' + page;
+      document.title = 'BugMe Issue Tracker | ' + page;
   
       // Update active class on navigation links
       removeActiveClass();
