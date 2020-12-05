@@ -36,7 +36,7 @@ CREATE TABLE Issues(
     created_by INT NOT NULL,
     created DATETIME NOT NULL,
     updated DATETIME DEFAULT NULL,
-    PRIMARY KEY(id)
+    PRIMARY KEY(id),
     FOREIGN KEY (assigned_to) REFERENCES Users(id),
     FOREIGN KEY (created_by) REFERENCES Users(id)
 );
