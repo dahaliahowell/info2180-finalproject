@@ -3,7 +3,7 @@ DROP DATABASE IF EXISTS BugMeTracker;
 CREATE DATABASE BugMeTracker;
 USE BugMeTracker;
 
-GRANT ALL PRIVILEGES ON BugMeTracker.* TO 'admin'@'project2.com' IDENTIFIED BY 'password123';
+GRANT ALL PRIVILEGES ON BugMeTracker.* TO 'admin'@'localhost' IDENTIFIED BY 'password123';
 
 /*  CREATION OF Users Table*/
 DROP TABLE IF EXISTS Users;

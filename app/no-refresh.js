@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // if a navigation link is clicked load the page
-    $("nav a").on('click', function(event) {
+    $("a").on('click', function(event) {
       event.preventDefault();
   
       let page = $(this).attr("href");
@@ -36,7 +36,7 @@ $(document).ready(function() {
   
       // Update active class on navigation links
       removeActiveClass();
-      $('#nav-' + page).parent().addClass('active');
+      $('#link-' + page).parent().addClass('active');
     });
   });
   
@@ -61,5 +61,5 @@ $(document).ready(function() {
   }
   
   function removeActiveClass() {
-    $('nav li.active').removeClass('active');
+    $('a.active').removeClass('active');
   }

@@ -20,11 +20,11 @@
         <div id="left">
           <nav>
             <ul>
-              <li><a id="nav-home" href="home.php"><i class="fa fa-fw fa-home"></i>Home</a></li>
-              <li><a id="nav-about" href="addUserForm.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Add User</a></li>
-              <li><a id="nav-contact" href="addIssueForm.php"><i class="fa fa-plus-circle"></i> Add Issue</a></li>
-              <li><a id="nav-contact" href="login.php"><i class="fa fa-power-off"></i> Logout</a></li>
-              <li><a id="nav-contact" href="issue.php"><i class="fa fa-power-off"></i> Logout</a></li>
+              <li><a id="link-home" href="home.php"><i class="fa fa-fw fa-home"></i>Home</a></li>
+              <li><a id="link-about" href="addUserForm.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Add User</a></li>
+              <li><a id="link-contact" href="addIssueForm.php"><i class="fa fa-plus-circle"></i> Add Issue</a></li>
+              <li><a id="link-contact" href="login.php"><i class="fa fa-power-off"></i> Logout</a></li>
+              <!-- <li><a id="link-issue" href="issue.php"><i class="fa fa-power-off"></i> Logout</a></li> -->
             </ul>
           </nav>
         </div>
@@ -37,4 +37,3 @@
     </div>
   </body>
 </html>
-
