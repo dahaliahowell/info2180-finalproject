@@ -20,7 +20,7 @@ $(document).ready(function() {
       removeActiveClass();
       $(event.target).parent().addClass('active');
     });
-  
+
     // This is triggered whenever a user clicks the forward and back buttons
     // in the web browser.
     $(window).on('popstate', function(event) {

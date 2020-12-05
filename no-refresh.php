@@ -14,16 +14,17 @@
     <div id="wrapper" class="container">
       <header>
         
-        <h3><i class="fa fa-bug" style="font-size: 1.5em;"></i>&nbsp;&nbsp;&nbsp;&nbsp;BugMe Issue Tracker</h3>
+      <h3><i class="fa fa-bug" style="font-size: 1.5em;"></i>&nbsp;&nbsp;&nbsp;&nbsp;BugMe Issue Tracker</h3>
       </header>
       <div id='flex'>
         <div id="left">
           <nav>
             <ul>
               <li><a id="nav-home" href="home.php"><i class="fa fa-fw fa-home"></i>Home</a></li>
-              <li><a id="nav-about" href="addUser.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Add User</a></li>
-              <li><a id="nav-contact" href="addIssue.php"><i class="fa fa-plus-circle"></i> Add Issue</a></li>
+              <li><a id="nav-about" href="addUserForm.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Add User</a></li>
+              <li><a id="nav-contact" href="addIssueForm.php"><i class="fa fa-plus-circle"></i> Add Issue</a></li>
               <li><a id="nav-contact" href="login.php"><i class="fa fa-power-off"></i> Logout</a></li>
+              <li><a id="nav-contact" href="issue.php"><i class="fa fa-power-off"></i> Logout</a></li>
             </ul>
           </nav>
         </div>

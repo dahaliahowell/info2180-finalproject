@@ -12,24 +12,23 @@
   <div class="form-field">
     <label for="user">Assigned To</label>
     <select name="user">
-      <option value="user1">Pretend User 1</option>
-      <option value="user2">Pretend User 2</option>
+      <?php include "scripts/test.php";?>
     </select>
   </div>
   <div class="form-field">
     <label for="type">Type</label>
     <select name="type">
-      <option value="bug">Bug</option>
-      <option value="proposal">Proposal</option>
-      <option value="task">Task</option>
+      <option value="Bug">Bug</option>
+      <option value="Proposal">Proposal</option>
+      <option value="Task">Task</option>
     </select>
   </div>
   <div class="form-field">
     <label for="priority">Priority</label>
     <select name="priority">
-      <option value="minor">Minor</option>
-      <option value="major">Major</option>
-      <option value="critical">Critical</option>
+      <option value="Minor">Minor</option>
+      <option value="Major">Major</option>
+      <option value="Critical">Critical</option>
     </select>
   </div>
   <br>

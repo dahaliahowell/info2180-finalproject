@@ -1,34 +1,45 @@
+<?php header('Access-Control-Allow-Origin: *'); 
+
+require_once 'phpmysqlconnection.php';
+
+    echo 'hiiii';
+
+    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+  
+    $id = (int) htmlspecialchars($_GET['id']);
+    $stmt = $conn->query("SELECT * FROM Issues where id = $id");
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+?>
+
 <link rel="stylesheet" href="styles/issues.css"/>
 
-<h1 class="no-margin-bottom-diff">Title</h1>
-<h3 class="no-margin-top-diff">Issue num</h3>
+<h1 class="no-margin-bottom-diff"><?= $results[0]['title']?></h1>
+<h3 class="no-margin-top-diff"><?= 'Issue #' . $results[0]['description']?></h3>
 
 <div id="issueDetails">
     <div id="main">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, tempora ratione. Velit nesciunt delectus architecto debitis possimus, necessitatibus inventore qui distinctio recusandae saepe provident sapiente. Ea nostrum culpa repellendus reiciendis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa numquam tempore error cum ab dolores, similique dolorem, labore porro quo dolor ad dignissimos perferendis sit nostrum eveniet omnis fuga voluptatibus.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque cum dolores ab atque, hic odit, placeat doloremque voluptatum architecto quo ipsum commodi laborum eos. Ad eum aliquid voluptas vero inventore!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae placeat adipisci obcaecati porro, distinctio, rem cupiditate, dicta tempore voluptatum totam repellendus libero vitae qui nulla veritatis asperiores nihil officia. Molestiae.
-        </p>
+        <p><?= $results[0]['description']?></p>
         <br>
         <ul>
-            <li><i class="fa fa-chevron-right" style="color: black;"></i>&nbsp;&nbsp;&nbsp;Issue created on Dec. 4, 2020 at 3:22pm by Dahalia Howell</li>
-            <li><i class="fa fa-chevron-right" style="color: black;"></i>&nbsp;&nbsp;&nbsp;Last updated on Dec. 4, 2020 at 3:22pm by Dahalia Howell</li>
+            <li><i class="fa fa-chevron-right" style="color: black;"></i>&nbsp;&nbsp;&nbsp;Issue created on <?= substr($results[0]['title'],0,10)?> at <?= substr($results[0]['title'],11,-1)?> <?= $results[0]['created_by']?></li>
+            <li><i class="fa fa-chevron-right" style="color: black;"></i>&nbsp;&nbsp;&nbsp;Last updated on <?= substr($results[0]['title'],0,10)?> at <?= substr($results[0]['title'],11,-1)?></li>
         </ul>
     </div>
     <div id="aside">
         <div id="sidebar">
             <h4 class="no-margin-top">Assigned To</h4>
-            <p class='no-margin-bottom'>Tom Brady</p>
+            <p class='no-margin-bottom'><?= $results[0]['assigned_to']?></p>
             <br>
             <h4 class="no-margin-top">Type</h4>
-            <p class='no-margin-bottom'>Bug</p>
+            <p class='no-margin-bottom'><?= $results[0]['type']?></p>
             <br>
             <h4 class="no-margin-top">Priority</h4>
-            <p class='no-margin-bottom'>Minor</p>
+            <p class='no-margin-bottom'><?= $results[0]['priority']?></p>
             <br>
             <h4 class="no-margin-top">Status</h4>
-            <p class='no-margin-bottom'>Open</p>
+            <p class='no-margin-bottom'><?= $results[0]['status']?></p>
             <br>
         </div>
         <br>
