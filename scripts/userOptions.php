@@ -13,6 +13,6 @@ try {
 
 <select name="assigned">
 <?php foreach ($results as $row): ?>
-<option value="<?=$row['id']?>"><?= $row['firstname'] . " " .$row['id'] . " ". $row['lastname']; ?></option>
+<option value="<?=$row['id']?>"><?= $row['firstname'] . " " . $row['lastname']; ?></option>
 <?php endforeach; ?>
 </select>

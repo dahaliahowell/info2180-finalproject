@@ -5,7 +5,6 @@
   document.getElementById("issueForm").addEventListener("submit", function(e){
 
     console.log('clicked')
-    e.preventDefault();
 
     // const password = document.getElementById('password');
     var validationFailed = false;
@@ -77,7 +76,7 @@ function displayErrorMessage(formField, message) {
 
 <h1>Create Issue</h1>
 
-<iframe name="hiddenFrame" class="hide" style="display:none;"></iframe>
+<iframe name="hiddenFrame" class="hide" style="display:none;"></iframe>  
 <form id="issueForm" action="scripts/addIssue.php" method="post" target="hiddenFrame">
   <div class="form-field">
     <label for="title">Title</label>

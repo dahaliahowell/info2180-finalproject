@@ -5,7 +5,6 @@
   document.getElementById("userForm").addEventListener("submit", function(e){
 
     console.log('clicked')
-    e.preventDefault();
 
     // const password = document.getElementById('password');
     var validationFailed = false;
