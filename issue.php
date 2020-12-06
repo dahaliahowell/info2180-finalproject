@@ -17,7 +17,11 @@ require_once 'scripts/phpmysqlconnection.php';
 
 ?>
 
+<link 
+href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+rel="stylesheet"  type='text/css'>
 <link rel="stylesheet" href="styles/issues.css"/>
+<link rel="stylesheet" href="styles/styles.css"/>
 
 <h1 class="no-margin-bottom-diff"><?= $results[0]['title']?></h1>
 <h3 class="no-margin-top-diff"><?= 'Issue #' . $results[0]['issueId']?></h3>

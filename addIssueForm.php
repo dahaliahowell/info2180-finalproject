@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="styles/form.css"/>
+<link rel="stylesheet" href="styles/styles.css"/>
 <script>
   // Hi sir, for some reason I had linking issues and embedding it was my last resort, my apologies.
 
