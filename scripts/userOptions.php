@@ -8,10 +8,11 @@ try {
 } catch(PDOException $e) {
     echo $sql . "<br>" . $e->getMessage();
 }
+
 ?>
 
-<select name="user">
+<select name="assigned">
 <?php foreach ($results as $row): ?>
-<option value="<?= (string) $row['id'];?>"><?= $row['firstname'] . " " . $row['lastname']; ?></option>
+<option value="<?=$row['id']?>"><?= $row['firstname'] . " " .$row['id'] . " ". $row['lastname']; ?></option>
 <?php endforeach; ?>
 </select>

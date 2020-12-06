@@ -19,9 +19,9 @@
       $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
       $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
 
-      $user = (int) $POST['user'];
+      $user = (int) $POST['assigned'];
       $created_by = (int) $_SESSION['userid'];
-      $type = $POST['type'];
+      $type = $POST['issue-type'];
       $priority = $_POST['priority'];
 
       date_default_timezone_set("Jamaica");
@@ -31,7 +31,7 @@
       echo "Title " . $title . '<br>';
       echo "Description ".$description . '<br>';
       echo "Assigned to " . $user . '<br>';
-      echo "Assign to before " . $POST['user'] . '<br>';
+      echo "Assign to before " . $POST['assigned'] . '<br>';
       echo "Created " . $created_by . '<br>';
       echo "Type " . $type . '<br>';
       echo "Priority " . $priority . '<br>';

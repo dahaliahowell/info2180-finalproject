@@ -8,7 +8,7 @@
   href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
   rel="stylesheet"  type='text/css'>
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <script src="app/userFormValidation.js" charset="utf-8"></script>
+    <!-- <script src="app/userFormValidation.js" charset="utf-8"></script> -->
     <script src="app/no-refresh.js" charset="utf-8"></script>
     <script src="app/active_filter.js" charset="utf-8"></script>
   </head>
@@ -23,9 +23,9 @@
           <nav>
             <ul>
               <li><a id="nav-home" href="home.php"><i class="fa fa-fw fa-home"></i>Home</a></li>
-              <li><a id="nav-about" href="addUserForm.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Add User</a></li>
-              <li><a id="nav-contact" href="addIssueForm.php"><i class="fa fa-plus-circle"></i> Add Issue</a></li>
-              <li><a id="nav-contact" href="login.php"><i class="fa fa-power-off"></i> Logout</a></li>
+              <li><a id="nav-adduser" href="addUserForm.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Add User</a></li>
+              <li><a id="nav-addissue" href="addIssueForm.php"><i class="fa fa-plus-circle"></i> Add Issue</a></li>
+              <li><a id="nav-logout" href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
               <!-- <li><a id="link-issue" href="issue.php"><i class="fa fa-power-off"></i> Logout</a></li> -->
             </ul>
           </nav>
