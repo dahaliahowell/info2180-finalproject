@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // if a navigation link is clicked load the page
-    $("a").on('click', function(event) {
+    $("nav a").on('click', function(event) {
       event.preventDefault();
   
       let page = $(this).attr("href");
@@ -21,6 +21,7 @@ $(document).ready(function() {
       $(event.target).parent().addClass('active');
     });
 
+
     // This is triggered whenever a user clicks the forward and back buttons
     // in the web browser.
     $(window).on('popstate', function(event) {
@@ -36,7 +37,7 @@ $(document).ready(function() {
   
       // Update active class on navigation links
       removeActiveClass();
-      $('#link-' + page).parent().addClass('active');
+      $('#nav-' + page).parent().addClass('active');
     });
   });
   
@@ -61,5 +62,5 @@ $(document).ready(function() {
   }
   
   function removeActiveClass() {
-    $('a.active').removeClass('active');
+    $('nav li.active').removeClass('active');
   }

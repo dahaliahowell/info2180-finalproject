@@ -10,8 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
   
   if ($_GET['context'] === 'my_tickets') {
 
-    $check = 'mytickets';
-    $stmt = $conn->query("");
+    $id = (int) $_GET['id'];
+    $stmt = $conn->query("SELECT i.id, i.title, i.type, i.status, i.assigned_to, i.created, u.firstname as fn, u.lastname as ln FROM Issues i JOIN Users u ON i.assigned_to=u.id where  i.assigned_to = $id");
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   } else if ($_GET['context'] === 'open') {
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     </tr>
     <?php foreach ($results as $row): ?>
     <tr>
-        <td><span id="ticket-span"><?= '#' . $row['id'] . " ";?></span><a id="link-issue" href='issue.php?id=<?=$row['id']?>'><?= $row['title'];?></a></td>
+        <td><span id="ticket-span"><?= '#' . $row['id'] . " ";?></span><a class="link-issue" href='issue.php?id=<?=$row['id']?>'><?= $row['title'];?></a></td>
         <td><?= $row['type'];?></td>
         <?php if ($row['status'] === 'Open'): ?>
             <td class="status"><span class="open">OPEN</span></td>

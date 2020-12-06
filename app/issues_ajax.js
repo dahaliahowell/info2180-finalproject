@@ -30,13 +30,16 @@ $(document).ready(function(){
         
         httpRequest = new XMLHttpRequest();
 
+        var value = document.getElementById('my-tickets').value;
+
         console.log('my tic c licked');
+        console.log(value)
     
-        var url = "scripts/issue_view.php?context=my_tickets";
+        var url = "scripts/issue_view.php?context=my_tickets&id=" + value;
         httpRequest.onreadystatechange = sendResult;
         httpRequest.open('GET', url);
         httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        httpRequest.send('context=my_tickets');
+        httpRequest.send('context=my_tickets&id=' + value);
     });
 
     function sendResult() {
