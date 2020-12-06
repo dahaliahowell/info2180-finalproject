@@ -28,8 +28,8 @@
         console.log('Please fix issues in Form submission and try again.');
         e.preventDefault();
     } else {
-      title.value = "";
-      description.value = "";
+      // title.value = "";
+      // description.value = "";
       alert('New Issue Successfully Created.');
     }
 

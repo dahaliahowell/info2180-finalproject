@@ -41,10 +41,10 @@
         console.log('Please fix issues in Form submission and try again.');
         e.preventDefault();
     } else {
-      firstname.value = "";
-      lastname.value = "";
-      password.value = "";
-      email.value = "";
+      // firstname.value = "";
+      // lastname.value = "";
+      // password.value = "";
+      // email.value = "";
       alert('New User Successfully Added.');
     }
 
