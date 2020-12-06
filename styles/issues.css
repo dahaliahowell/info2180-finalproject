@@ -52,3 +52,7 @@ ul {
     cursor: pointer;
     width: 100%;
 }
+
+#in-progress {
+    background-color: #4CAF50;
+}

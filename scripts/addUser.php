@@ -4,11 +4,17 @@
 
     if (isset($_POST['submit'])) {
 
-      $firstname = $_POST['fname'];
-      $lastname = $_POST['lname'];
-      $password = $POST['password'];
+      // $firstname = $_POST['fname'];
+      // $lastname = $_POST['lname'];
+      // $password = $POST['password'];
+      // $password = md5($password);
+      // $email = $_POST['email'];
+
+      $firstname = filter_input(INPUT_POST, 'fname', FILTER_SANITIZE_STRING);
+      $lastname = filter_input(INPUT_POST, 'lname', FILTER_SANITIZE_STRING);
+      $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
       $password = md5($password);
-      $email = $_POST['email'];
+      $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 
         echo $firstname . '<br>';
         echo $lastname . '<br>';

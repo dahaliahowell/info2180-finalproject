@@ -11,7 +11,7 @@
 
 <div id="issues">
     <h1>Issues</h1>
-    <button type="submit" class="btn">Create New Issue</button>
+    <button type="submit" id="create-btn" class="btn">Create New Issue</button>
 </div>
 
 <div id="filter">

@@ -224,3 +224,12 @@ td {
 .status {
   text-align: center;
 }
+
+#create-btn {
+  background-color: #4CAF50;
+}
+
+a {
+  color: #0b61ac;
+  text-decoration: none;
+}

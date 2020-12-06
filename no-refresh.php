@@ -8,7 +8,9 @@
   href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
   rel="stylesheet"  type='text/css'>
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="app/userFormValidation.js" charset="utf-8"></script>
     <script src="app/no-refresh.js" charset="utf-8"></script>
+    <script src="app/active_filter.js" charset="utf-8"></script>
   </head>
   <body>
     <div id="wrapper" class="container">

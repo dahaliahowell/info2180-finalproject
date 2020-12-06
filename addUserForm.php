@@ -1,26 +1,27 @@
+<link rel="stylesheet" href="styles/form.css"/>
+
 <h1>New User</h1>
 
-
-<!--<iframe id="some_name" name="some_name" style="display:none"></iframe>-->
-<form class="" action="scripts/addUser.php" method="post" target="some_name">
+<form id="userForm" action="scripts/addUser.php" method="post">
   <div class="form-field">
     <label for="fname">Firstname</label>
-    <input type="text" name="fname" value="">
+    <input id="fname" type="text" name="fname" value="">
   </div>
   <div class="form-field">
     <label for="lname">Lastname</label>
-    <input type="text" name="lname" value="">
+    <input id="lname" type="text" name="lname" value="">
   </div>
   <div class="form-field">
     <label for="password">Password</label>
-    <input type="password" name="password" value="">
+    <input type="password" name="password" value="" id="password">
   </div>
   <div class="form-field">
     <label for="email">Email</label>
-    <input type="email" name="email" value="">
+    <input id="email" type="email" name="email" value="">
   </div>
   <br>
-  <button type="submit" name="submit" class="btn">Submit</button>
+  <button type="submit" name="submit" class="btn" id="submit_btn">Submit</button>
 </form>
+
 
 <?php include 'scripts/addUser.php'; ?>

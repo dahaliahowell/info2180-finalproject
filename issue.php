@@ -53,7 +53,7 @@ require_once 'scripts/phpmysqlconnection.php';
             </div>
             <br>
             <div>
-                <button type="submit" name="inprogress" class="btn">Mark In Progress</button>
+                <button type="submit" name="inprogress" class="btn" id="in-progress">Mark In Progress</button>
             </div>
         </form>
     </div>

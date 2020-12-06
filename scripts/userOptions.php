@@ -10,6 +10,9 @@ try {
 }
 ?>
 
+<select name="user">
 <?php foreach ($results as $row): ?>
-<option value=<?= (string) $row['id'];?>><?= $row['firstname'] . " " . $row['lastname']; ?></option>
+<option value="<?= (string) $row['id'];?>"><?= $row['firstname'] . " " . $row['lastname']; ?></option>
+<? echo (string) $row['id'];?>
 <?php endforeach; ?>
+</select>

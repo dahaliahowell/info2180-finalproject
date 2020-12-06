@@ -9,11 +9,14 @@
     echo 'sessionid'.$_SESSION['userid'];
     header("location:../no-refresh.php");
   } else {
+    
   if (isset($_POST["login"])) {
-    echo 'im in' . '<br>';
-      $email = $_POST["email"];
-      $password = $_POST["password"];
-      echo $email . '<br>' . $password . '<br>';
+    // echo 'im in' . '<br>';
+      // $email = $_POST["email"];
+      // $password = $_POST["password"];
+      $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+      $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+      // echo $email . '<br>' . $password . '<br>';
       $password = md5($password);
 
       echo $email . '<br>' . $password;
