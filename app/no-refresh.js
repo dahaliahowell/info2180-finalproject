@@ -39,6 +39,17 @@ $(document).ready(function() {
       removeActiveClass();
       $('#nav-' + page).parent().addClass('active');
     });
+
+    /*var trigger = $('table td a'), container = $('#content');
+
+    trigger.on('click', function() {
+      var $this = $(this), target = $this.data('target');
+
+      container.load(target + '.php');
+
+      return false;
+    });*/
+
   });
   
   /**

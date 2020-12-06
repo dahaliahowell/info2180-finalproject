@@ -5,8 +5,8 @@ require_once 'scripts/phpmysqlconnection.php';
     $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
   
     $id = (int) $_GET['id'];
-    $stmt = $conn->query("SELECT *, u.firstname as fn, u.lastname as ln FROM Issues i JOIN Users u ON assigned_to=u.id where i.id = $id");
-    $stmt1 = $conn->query("SELECT *, u.firstname as fn, u.lastname as ln FROM Issues i JOIN Users u ON created_by=u.id where i.id = $id");
+    $stmt = $conn->query("SELECT *, i.id as issueId, u.firstname as fn, u.lastname as ln FROM Issues i JOIN Users u ON assigned_to=u.id where i.id = $id");
+    $stmt1 = $conn->query("SELECT *, i.id as issueId, u.firstname as fn, u.lastname as ln FROM Issues i JOIN Users u ON created_by=u.id where i.id = $id");
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $results1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
 
@@ -20,7 +20,7 @@ require_once 'scripts/phpmysqlconnection.php';
 <link rel="stylesheet" href="styles/issues.css"/>
 
 <h1 class="no-margin-bottom-diff"><?= $results[0]['title']?></h1>
-<h3 class="no-margin-top-diff"><?= 'Issue #' . $results[0]['id']?></h3>
+<h3 class="no-margin-top-diff"><?= 'Issue #' . $results[0]['issueId']?></h3>
 
 <div id="issueDetails">
     <div id="main">
@@ -47,13 +47,13 @@ require_once 'scripts/phpmysqlconnection.php';
             <br>
         </div>
         <br>
-        <form>
+        <form action="scripts/updateIssue.php" method="post">
             <div>
-                <button type="submit" name="closed" class="btn">Mark as Closed</button>
+                <button type="submit" name="closed" id="closed" value="<?=$results[0]['issueId']?>" class="button">Mark as Closed</button>
             </div>
             <br>
             <div>
-                <button type="submit" name="inprogress" class="btn" id="in-progress">Mark In Progress</button>
+                <button type="submit" name="inprogress" id="in-progress" value="<?=$results[0]['issueId']?>" class="button" id="in-progress">Mark In Progress</button>
             </div>
         </form>
     </div>

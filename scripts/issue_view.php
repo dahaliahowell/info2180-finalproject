@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     </tr>
     <?php foreach ($results as $row): ?>
     <tr>
-        <td><span id="ticket-span"><?= '#' . $row['id'] . " ";?></span><a class="link-issue" href='issue.php?id=<?=$row['id']?>'><?= $row['title'];?></a></td>
+        <td><span id="ticket-span"><?= '#' . $row['id'] . " ";?></span><a class="link-issue" data-target="issue" href='issue.php?id=<?=$row['id']?>'><?= $row['title'];?></a></td>
         <td><?= $row['type'];?></td>
         <?php if ($row['status'] === 'Open'): ?>
             <td class="status"><span class="open">OPEN</span></td>
